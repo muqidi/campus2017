@@ -2,7 +2,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.Format;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
@@ -32,8 +31,7 @@ public class  Statistics{
             }
             Stream<String> lines = Files.lines(filepath);
             long count = lines.filter((p) -> (!p.trim().matches("(^$)|(^//.*)"))).count();
-            String outputinfo = String.format("文件的有效行数是：%d",count);
-            System.out.println(outputinfo);
+            System.out.printf("文件的有效行数是：%d",count);
         } catch (IOException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
