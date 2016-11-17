@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 /**
  * Created by muqidi on 2016/11/13.
- * 统计行的规则
+ * 统计java文件中有效的行数
  * E:\JAVA\MyTest\src\exercise\TryCatch.java
  */
 public class  Statistics{
@@ -30,7 +30,7 @@ public class  Statistics{
                 break;
             }
             Stream<String> lines = Files.lines(filepath);
-            long count = lines.filter((p) -> (!p.trim().matches("(^$)|(^//.*)"))).count();
+            long count = lines.filter((p) -> (!p.trim().matches("(^$)|(^//.*)"))).count();//排除空白行和单行注释行
             System.out.printf("文件的有效行数是：%d",count);
         } catch (IOException e) {
             System.out.println(e.getMessage());
