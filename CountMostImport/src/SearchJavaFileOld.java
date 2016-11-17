@@ -36,14 +36,12 @@ public class SearchJavaFileOld {
     }
 
     private static void  countImport(File[] classfile){
-        HashMap<String,Integer> coutclass = new HashMap<String, Integer>();
+        int line = 0;
         for(File f : classfile){
             BufferedReader reader = null;
             try {
-                System.out.println("以行为单位读取文件内容，一次读一整行：");
                 reader = new BufferedReader(new FileReader(f));
                 String tempString = null;
-                int line = 1;
                 // 一次读入一行，直到读入null为文件结束
                 while ((tempString = reader.readLine()) != null) {
                     // 显示行号
@@ -65,21 +63,17 @@ public class SearchJavaFileOld {
             }
         }
     }
-    public  void readJavaClassFileOld() {// java程序的主入口处
-        File folder = new File("E:\\my project\\java Project");// 默认目录
+    public  void readJavaClassFileOld(String strfolder) {// java程序的主入口处
+        File folder = new File(strfolder);// 默认目录
         String keyword = ".java";
-        if (!folder.exists()) {// 如果文件夹不存在
-            System.out.println("目录不存在：" + folder.getAbsolutePath());
-            return;
-        }
         File[] result = searchFileOld(folder, keyword);// 调用方法获得文件数组
         countImport(result);
-        System.out.println("在 " + folder + " 以及所有子文件时查找对象" + keyword);
+        //System.out.println("在 " + folder + " 以及所有子文件时查找对象" + keyword);
         System.out.println("查找了" + countFiles + " 个文件，" + countFolders + " 个文件夹，共找到 " + result.length + " 个符合条件的文件：");
-        for (int i = 0; i < result.length; i++) {// 循环显示文件
+       /* for (int i = 0; i < result.length; i++) {// 循环显示文件
             File file = result[i];
             System.out.println(file.getAbsolutePath() + " ");// 显示文件绝对路径
-        }
+        }*/
     }
 
 }
