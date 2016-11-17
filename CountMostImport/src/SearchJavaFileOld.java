@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+//通过file类遍历目录以及文件，一种方法吧。
+
 
 public class SearchJavaFileOld {
     static int countFiles = 0;// 声明统计文件个数的变量

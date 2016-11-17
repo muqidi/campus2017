@@ -5,6 +5,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
+//可能是某个师兄写的，仅作为参考
+
 public class test {
     String path = new String();
     List<File> allFiles = new ArrayList<File>();
