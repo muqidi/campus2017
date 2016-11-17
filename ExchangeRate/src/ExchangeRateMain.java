@@ -6,6 +6,7 @@ import java.util.*;
 /**
  * Created by bistu on 2016/11/17.
  */
+ //从这里开始运行
 public class ExchangeRateMain {
     //"startdate=2016-08-17&enddate=2016-11-17&money_code=USD&type=0&page=2"
     private static String URL = "http://biz.finance.sina.com.cn/forex/forex.php?" ;

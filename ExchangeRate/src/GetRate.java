@@ -11,6 +11,8 @@ import static java.lang.Thread.sleep;
 /**
  * Created by bistu on 2016/11/14.
  */
+ //从网站爬取数据
+ 
 public class GetRate {
     private static String MATCH_DOUBLE ="[1-9]\\d*.\\d*|0.\\d*[1-9]\\d*";
     private static String MATCH_DATE = "\\d{4}(\\-|\\/|.)\\d{1,2}\\1\\d{1,2}";
